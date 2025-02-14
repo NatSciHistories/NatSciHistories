@@ -7,4 +7,5 @@ export default defineConfig({
         plugins: [tailwindcss()],
     },
     site: 'https://natscilaboratories.github.io',
+    base: '/natscilaboratories/',
 });
