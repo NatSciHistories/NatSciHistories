@@ -5,10 +5,8 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
     vite: {
         plugins: [tailwindcss()],
-        build: {
-            assetsInlineLimit: 0,
-        },
     },
+    output: "static", // Ensures static build
+    base: "./",
     site: 'https://natscilaboratories.github.io/NatSciLaboratories',
-    base: "",
 });
