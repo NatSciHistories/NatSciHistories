@@ -6,5 +6,5 @@ export default defineConfig({
     vite: {
         plugins: [tailwindcss()],
     },
-    site: 'https://natscilaboratories.github.io/natscilaboratories',
+    site: 'https://natscilaboratories.github.io/NatSciLaboratories',
 });
