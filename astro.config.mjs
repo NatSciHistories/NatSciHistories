@@ -8,5 +8,5 @@ export default defineConfig({
     },
     output: "static", // Ensures static build
     site: 'https://natscilaboratories.github.io/NatSciLaboratories',
-    base: './',
+    base: '/NatSciLaboratories/',
 });
