@@ -7,6 +7,6 @@ export default defineConfig({
         plugins: [tailwindcss()],
     },
     output: "static", // Ensures static build
-    base: "./",
     site: 'https://natscilaboratories.github.io/NatSciLaboratories',
+    base: './',
 });
