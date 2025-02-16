@@ -9,6 +9,6 @@ export default defineConfig({
     },
     integrations: [pagefind()],
     output: "static", // Ensures static build
-    site: 'https://natscilaboratories.github.io/NatSciLaboratories',
-    base: '/NatSciLaboratories/',
+    site: 'https://natscihistories.github.io/NatSciHistories',
+    base: '/NatSciHistories/',
 });

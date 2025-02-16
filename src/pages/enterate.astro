@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Search from "astro-pagefind/components/Search";
+import Blogcards from '../components/blogcards.astro';
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
@@ -8,12 +8,10 @@ import Search from "astro-pagefind/components/Search";
 <Layout>
 	<div class="pt-15"></div>
 	<div class="mx-auto items-center flex relative bg-uprrpred-100 text-uprrpblack p-10 md:max-w-6xl">
-		<h1 class="mx-auto text-3xl text-center block">Repositorio de documentos sobre la historia de Ciencias Naturales - UPRRP</h1>
+		<h1 class="mx-auto text-3xl text-center block">Noticias y documentos recientes</h1>
 	</div>
 	<div class="mx-auto max-w-3/4 py-2">
 		<p class="text-2x1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quos expedita cumque accusantium accusamus repudiandae qui labore ad, vitae amet minima voluptatibus, pariatur nobis. Reiciendis debitis cupiditate sunt eaque dolore? Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ducimus architecto facere eius magnam, hic praesentium et perspiciatis aperiam. Impedit dolore laudantium ipsum aliquam facere nesciunt fugit tempora, molestiae quos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, molestiae! Saepe minus quis hic, nihil, error similique laboriosam repellendus optio eos beatae velit magni accusantium animi adipisci dolor aliquam facilis.</p>
 	</div>
-	<div class="container max-w-3/4 mx-auto py-3">
-		<Search id="search" className="pagefind-ui" uiOptions={{ showImages: false }} />
-	</div>
+	<Blogcards></Blogcards>
 </Layout>
