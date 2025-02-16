@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+@theme{
+    --color-uprrpred: #e70033;
+    --color-uprrpred-100: #FF5349;
+    --color-uprrpgray:  #babcbe;
+    --color-uprrpblack: #261c02;
+}
