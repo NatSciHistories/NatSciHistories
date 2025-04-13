@@ -1,20 +1,74 @@
 ---
-
+import Search from "astro-pagefind/components/Search";
 ---
-<nav class="flex px-4 border-b md:shadow-lg items-center relative bg-slate-50">
-    <div class="md:py-4">
-        <a class="inline-flex max-w-40 md:shrink-0" href="/NatSciHistories/"><img src="/NatSciHistories/logoescrito-uprrp.png" alt="logo-uprrp" /></a>
+<nav class="flex flex-col md:flex-row px-4 border-b md:shadow-lg bg-slate-50 z-50">
+    <!-- Top section: Logo and Title -->
+    <div class="flex items-center md:py-4">
+      <a class="inline-flex max-w-40 md:shrink-0" href="/NatSciHistories/">
+        <img src="/NatSciHistories/logoescrito-uprrp.png" alt="logo-uprrp" />
+      </a>
+      <p class="text-sm pl-3 my-2 inline-flex shrink">
+        Historia de la Facultad de Ciencias Naturales
+      </p>
     </div>
-    <p class="text-lg pl-3 my-2 inline-flex shrink">Historia de la Facultad de Ciencias Naturales</p>
-    <ul class="border-1 md:border-0 md:px-2 ml-auto md:flex md:space-x-2 absolute md:relative top-full left-0 right-0">
+  
+    <!-- Nav controls container -->
+    <div class="flex items-center w-full md:w-auto md:ml-auto">
+    <!-- Dropdown menu (small screens only) -->
+    <details class="min-w-auto relative md:hidden group">
+        <summary class="list-none flex items-center p-2 cursor-pointer peer">
+        <!-- Custom toggle icon -->
+        <svg id='Expand_Arrow_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
+            <g transform="matrix(0.48 0 0 0.48 12 12)" >
+            <path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" translate(-25, -24.99)" d="M 44.988281 13.984375 C 44.726563 13.992188 44.476563 14.101563 44.292969 14.292969 L 25 33.585938 L 5.707031 14.292969 C 5.519531 14.097656 5.261719 13.992188 4.992188 13.988281 C 4.582031 13.992188 4.21875 14.238281 4.0625 14.613281 C 3.910156 14.992188 4 15.421875 4.292969 15.707031 L 24.292969 35.707031 C 24.683594 36.097656 25.316406 36.097656 25.707031 35.707031 L 45.707031 15.707031 C 46.003906 15.421875 46.09375 14.980469 45.9375 14.601563 C 45.777344 14.222656 45.402344 13.976563 44.988281 13.984375 Z" stroke-linecap="round" />
+            </g>
+        </svg>
+        </summary>
+    
+        <!-- Dropdown content -->
+        <div class="absolute mt-2 bg-slate-50 border rounded shadow-md z-50">
+            <ul class="flex flex-col">
+                <li class="hover:bg-uprrpred-100 hover:text-slate-50 border-t p-2">
+                    <a href="/NatSciHistories/">
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="hover:bg-uprrpred-100 hover:text-slate-50 border-t p-2">
+                    <a href="/NatSciHistories/sobre-nosotros/index.html">
+                        <span>Sobre nosotros</span>
+                    </a>
+                </li>
+                <li class="hover:bg-uprrpred-100 hover:text-slate-50 border-t p-2">
+                    <a href="/NatSciHistories/enterate/index.html">
+                        <span>¡Entérate!</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </details>
+  
+      <!-- The search function, visible on all screens -->
+      <div class="flex-none max-w-2xs container mx-auto py-4 order-last md:order-first">
+        <Search id="search" className="pagefind-ui" uiOptions={{ showImages: false }} />
+      </div>
+  
+      <!-- Medium+ screens: Inline nav menu -->
+      <ul class="hidden md:flex md:space-x-2 order-last md:order-last">
         <li class="inline-flex hover:bg-uprrpred-100 hover:text-slate-50">
-            <a href="/NatSciHistories/" class="p-4 items-center"><span>Home</span></a>
+          <a href="/NatSciHistories/" class="p-4 my-auto items-center">
+            <span>Home</span>
+          </a>
         </li>
         <li class="inline-flex hover:bg-uprrpred-100 hover:text-slate-50">
-            <a href="/NatSciHistories/sobre-nosotros/index.html" class="inline-flex p-4 items-center"><span>Sobre nosotros</span></a>
+          <a href="/NatSciHistories/sobre-nosotros/index.html" class="inline-flex p-4 items-center text-center">
+            <span>Sobre nosotros</span>
+          </a>
         </li>
         <li class="inline-flex hover:bg-uprrpred-100 hover:text-slate-50">
-            <a href="/NatSciHistories/enterate/index.html" class="inline-flex p-4 items-center space-x-2"><span>¡Entérate!</span></a>
+          <a href="/NatSciHistories/enterate/index.html" class="inline-flex p-4 items-center space-x-2">
+            <span>¡Entérate!</span>
+          </a>
         </li>
-    </ul>
-</nav>
+      </ul>
+    </div>
+  </nav>
